@@ -1,16 +1,14 @@
-//race condition at the end
-
-Thread-1 value = 0
 Thread-0 value = 0
-Thread-1 value = 1
-Thread-0 value = 2
+Thread-0 value = 1
+Thread-1 value = 0
 Thread-1 value = 3
-Thread-0 value = 4
+Thread-1 value = 4
 Thread-1 value = 5
-Thread-0 value = 6
+Thread-1 value = 6
 Thread-1 value = 7
-Thread-0 value = 8
-Thread-1 value = 9
+Thread-0 value = 2
+Thread-1 value = 8
+Thread-0 value = 9
 Thread-0 value = 10
 Thread-1 value = 11
 Thread-0 value = 12

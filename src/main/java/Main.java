@@ -6,18 +6,18 @@ public class Main {
         thread.start();
         runnable.start();
     }
+}
 
-    private static class CustomThread extends Thread {
-        @Override
-        public void run() {
-            Counter.counter(getName());
-        }
+class CustomThread extends Thread {
+    @Override
+    public void run() {
+        Counter.counter(getName());
     }
+}
 
-    private static class CustomRunnable implements Runnable {
-        @Override
-        public void run() {
-            Counter.counter(Thread.currentThread().getName());
-        }
+class CustomRunnable implements Runnable {
+    @Override
+    public void run() {
+        Counter.counter(Thread.currentThread().getName());
     }
 }
