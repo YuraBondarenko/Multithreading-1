@@ -7,17 +7,3 @@ public class Main {
         runnable.start();
     }
 }
-
-class CustomThread extends Thread {
-    @Override
-    public void run() {
-        Counter.counter(getName());
-    }
-}
-
-class CustomRunnable implements Runnable {
-    @Override
-    public void run() {
-        Counter.counter(Thread.currentThread().getName());
-    }
-}
