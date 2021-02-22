@@ -8,8 +8,7 @@ public class Counter {
 
     public void count(String threadName) {
         while (counter < MAX) {
-            logger.info(threadName + " value = " + counter);
-            counter++;
+            logger.info(threadName + " value = " + ++counter);
         }
     }
 }
