@@ -1,6 +1,12 @@
 public class CustomRunnable implements Runnable {
+    private final Counter counter;
+
+    public CustomRunnable(Counter counter) {
+        this.counter = counter;
+    }
+
     @Override
     public void run() {
-        Counter.counter(Thread.currentThread().getName());
+        counter.counter(Thread.currentThread().getName());
     }
 }
