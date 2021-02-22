@@ -7,6 +7,6 @@ class CustomThread extends Thread {
 
     @Override
     public void run() {
-        counter.counter(getName());
+        counter.count(getName());
     }
 }

@@ -7,6 +7,6 @@ public class CustomRunnable implements Runnable {
 
     @Override
     public void run() {
-        counter.counter(Thread.currentThread().getName());
+        counter.count(Thread.currentThread().getName());
     }
 }

@@ -6,9 +6,10 @@ public class Counter {
     private static final int MAX = 100;
     private int counter = MIN;
 
-    public void counter(String threadName) {
-        for (; counter < MAX; counter++) {
+    public void count(String threadName) {
+        while (counter < MAX) {
             logger.info(threadName + " value = " + counter);
+            counter++;
         }
     }
 }
