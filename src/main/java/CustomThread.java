@@ -4,6 +4,7 @@ class CustomThread extends Thread {
     public CustomThread(Counter counter) {
         this.counter = counter;
     }
+
     @Override
     public void run() {
         counter.counter(getName());
