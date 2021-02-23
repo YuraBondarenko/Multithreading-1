@@ -1,3 +1,5 @@
+package first;
+
 public class CustomRunnable implements Runnable {
     private final Counter counter;
 

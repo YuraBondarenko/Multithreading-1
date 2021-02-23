@@ -1,3 +1,5 @@
+package first;
+
 class CustomThread extends Thread {
     private final Counter counter;
 
