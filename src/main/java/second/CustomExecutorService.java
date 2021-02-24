@@ -17,7 +17,6 @@ public class CustomExecutorService {
         this.list = list;
     }
 
-
     public Integer getSum() {
         int size = list.size();
         ExecutorService executorService = Executors.newFixedThreadPool(THREADS);
