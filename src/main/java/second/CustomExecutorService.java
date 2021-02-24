@@ -11,18 +11,19 @@ import java.util.concurrent.Future;
 public class CustomExecutorService {
     private static final int AMOUNT_OF_THREADS = 10;
     private static final int THREADS = 4;
-    private final CustomList customList;
+    private final List<Integer> list;
 
-    public CustomExecutorService(CustomList customList) {
-        this.customList = customList;
+    public CustomExecutorService(List<Integer> list) {
+        this.list = list;
     }
 
-    public Integer sum() {
-        int size = customList.getList().size();
+
+    public Integer getSum() {
+        int size = list.size();
         ExecutorService executorService = Executors.newFixedThreadPool(THREADS);
         List<Callable<Integer>> callables = new ArrayList<>();
         for (int i = 0; i < AMOUNT_OF_THREADS; i++) {
-            callables.add(new CustomCallable(customList,
+            callables.add(new SumCalculatorCallable(list,
                     i * size / AMOUNT_OF_THREADS, (i + 1) * size / AMOUNT_OF_THREADS));
         }
         int result = 0;
