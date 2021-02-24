@@ -22,7 +22,7 @@ public class CustomForkJoin extends RecursiveTask<Integer> {
                     .mapToInt(ForkJoinTask::join)
                     .sum();
         }
-        return processing();
+        return calculateSum();
     }
 
     private List<CustomForkJoin> createSubtasks() {
@@ -35,7 +35,7 @@ public class CustomForkJoin extends RecursiveTask<Integer> {
         return subtasks;
     }
 
-    private Integer processing() {
+    private Integer calculateSum() {
         return list
                 .stream()
                 .mapToInt(s -> s)
